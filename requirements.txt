@@ -1,0 +1,16 @@
+Requirements
+Project. Part 4
+Input: the text like a sequence of binary digits from Part 2
+Goal: Encode the result  binary sequence from Part 2 with Hamming code (7,4). 
+Output: a sequence of binary digits ready for error-correction
+
+Project. Part 5
+Input: a sequence of binary digits from Part 4
+Goal: Add random errors to the result  binary sequence after Part4 (Hamming code) with a certain interval - only 1 error in every block of 7 bits
+Output: a sequence of binary digits after Hamming code with artificially created errors
+
+Project. Part 6
+Input: a sequence of binary digits from Part 5
+Goal: decode Hamming code (find, fix errors and remove redundant bits)
+Output: a sequence of binary digits
+P.S. Change the input for Part 3 correctly
