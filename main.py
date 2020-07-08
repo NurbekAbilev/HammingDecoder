@@ -26,21 +26,34 @@ decoded_text2 = decode(code_text2,table2)
 # print()
 
 # print("All chars(including whitespace")
+perc = get_percentage_all_chars(text)
+sort = sorted(perc.items(), key=lambda kv: kv[1])
+print(sort)
+
+import math
+sm = 0
+for key,p in perc.items():
+    # print(p)
+    sm += -(p*math.log(p))
+
+print(sm)
+
+
 # print(table2)
 # print(code_text2) 
 # print(decoded_text2)
 
-import hamming
-import copy
+# import hamming
+# import copy
 
-hamming_binary_string = hamming.code_hamming(code_text2)
-hamming_binary_string_copy = copy.deepcopy(hamming_binary_string)
+# hamming_binary_string = hamming.code_hamming(code_text2)
+# hamming_binary_string_copy = copy.deepcopy(hamming_binary_string)
 
-noised_hamming = hamming.random_noise(hamming_binary_string_copy)
-error_decoded = hamming.decode_hamming(copy.deepcopy(noised_hamming))
+# noised_hamming = hamming.random_noise(hamming_binary_string_copy)
+# error_decoded = hamming.decode_hamming(copy.deepcopy(noised_hamming))
 
-for i in range(len(hamming_binary_string)):
-    print(hamming_binary_string[i],noised_hamming[i],error_decoded[i])
+# for i in range(len(hamming_binary_string)):
+#     print(hamming_binary_string[i],noised_hamming[i],error_decoded[i])
 
 
 
